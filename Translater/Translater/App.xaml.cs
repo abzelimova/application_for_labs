@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Translater
 {
@@ -13,7 +8,7 @@ namespace Translater
         {
             InitializeComponent();
 
-            MainPage = new Translater.MainPage();
+            MainPage = new NavigationPage(new StartPage());
         }
 
         protected override void OnStart()

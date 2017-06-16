@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Translater.StartPage">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem x:Name ="first" />
+    <ToolbarItem x:Name ="change" Text ="⇔" Activated="ChangeLang"/>
+    <ToolbarItem x:Name ="second" />
+  </ContentPage.ToolbarItems>
+  <StackLayout x:Name="Stacktoeditor" 
+               HorizontalOptions="Center" 
+               Padding="5,10">
+    <Editor x:Name="Textarea" 
+            BackgroundColor="White" 
+            TextColor="Black" 
+            Text="{Binding TextinBox}" 
+            WidthRequest="1000" 
+            HeightRequest="150"/>
+    <Button Clicked="GiveTranslate" 
+            Text="Перевести" 
+            WidthRequest="1000"/>
+    <Label Text="Перевод :"/>
+    <Label x:Name = "TranslatedWord" Text="{Binding TranslatedWord}"/>
+  </StackLayout>
+</ContentPage>
